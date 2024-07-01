@@ -18,39 +18,56 @@ namespace TraineeTask.Solution
         //start
         public IDictionary<string, decimal> Calculate(IEnumerable<Employee> team, Dictionary<string, Salary> salaries)
         {
+            if(team is null)
+            {
+                throw new NullReferenceException(nameof(team) + "\n!!!!!!!!!\nThe team object is null!\nPlease, use valid data\n!!!!!!!!!\n");
+            }
+            if(salaries is null)
+            {
+                throw new NullReferenceException(nameof(salaries) + "\n!!!!!!!!!\nThe salaries object is null!\nPlease use valid data\n!!!!!!!!!\n");
+            }
             var report = new Dictionary<string, decimal>();
 
             decimal totalTeamBudget = 0;
 
-            foreach (var employee in team)
+            try
             {
-                if (salaries.ContainsKey(employee.Position))
+                foreach (var employee in team)
                 {
-                    var salary = salaries[employee.Position];
-                    if (salary.Amount < 100 || salary.Amount > 100000)
+                    if (salaries.ContainsKey(employee.Position))
                     {
-                        continue;
-                    }
-                    if (!int.TryParse(salary.Tax.TrimEnd('%'), out int tax) || tax < 0 || tax > 99)
-                    {
-                        continue; 
-                    }
-                    decimal taxRate = decimal.Parse(salary.Tax.TrimEnd('%')) / 100;
-                    decimal grossSalary = salary.Amount / (1 - taxRate);
-                    string positionKey = $"Total{employee.Position}Budget";
+                        var salary = salaries[employee.Position];
+                        if (salary.Amount < 100 || salary.Amount > 100000)
+                        {
+                            continue;
+                        }
+                        if (!int.TryParse(salary.Tax.TrimEnd('%'), out int tax) || tax < 0 || tax > 99)
+                        {
+                            continue;
+                        }
+                        decimal taxRate = decimal.Parse(salary.Tax.TrimEnd('%')) / 100;
+                        decimal grossSalary = salary.Amount / (1 - taxRate);
+                        string positionKey = $"Total{employee.Position}Budget";
 
-                    if (report.ContainsKey(positionKey))
-                    {
-                        report[positionKey] += Math.Round(grossSalary, 2);
-                    }
-                    else
-                    {
-                        report[positionKey] = Math.Round(grossSalary, 2);
-                    }
+                        if (report.ContainsKey(positionKey))
+                        {
+                            report[positionKey] += Math.Round(grossSalary, 2);
+                        }
+                        else
+                        {
+                            report[positionKey] = Math.Round(grossSalary, 2);
+                        }
 
-                    totalTeamBudget += Math.Round(grossSalary, 2);
+                        totalTeamBudget += Math.Round(grossSalary, 2);
+                    }
                 }
             }
+            catch (NullReferenceException ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            
 
             report["TotalTeamBudget"] = Math.Round(totalTeamBudget, 2);
 

@@ -7,7 +7,7 @@ namespace _.NET_Trainee_Task
     {
         static void Main()
         {
-            // Example #1
+            //Example #1
             var team1 = new Employee[]
             {
                 new Employee("Misha", "Manager"),
@@ -23,15 +23,6 @@ namespace _.NET_Trainee_Task
                 { "Artist", new Salary(1500, "15%") },
             };
 
-            var financeReport1 = new BudgetCalculator().Calculate(team1, salaries1);
-            Console.WriteLine("Example #1 Finance Report:");
-            foreach (var item in financeReport1)
-            {
-                Console.WriteLine($"{item.Key}: {item.Value}");
-            }
-            Console.WriteLine();
-
-            // Example #2
             var team2 = new Employee[]
             {
                 new Employee("Alexander", "TeamLead"),
@@ -47,12 +38,40 @@ namespace _.NET_Trainee_Task
                 { "Architect", new Salary(9000, "34%") },
             };
 
-            var financeReport2 = new BudgetCalculator().Calculate(team2, salaries2);
-            Console.WriteLine("Example #2 Finance Report:");
-            foreach (var item in financeReport2)
+            try
             {
-                Console.WriteLine($"{item.Key}: {item.Value}");
+                var financeReport1 = new BudgetCalculator().Calculate(team1, salaries1);
+                Console.WriteLine("Example #1 Finance Report:");
+                foreach (var item in financeReport1)
+                {
+                    Console.WriteLine($"{item.Key}: {item.Value}");
+                }
             }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+            }
+
+            try
+            {
+                var financeReport2 = new BudgetCalculator().Calculate(team2, salaries2);
+                Console.WriteLine("Example #2 Finance Report:");
+                foreach (var item in financeReport2)
+                {
+                    Console.WriteLine($"{item.Key}: {item.Value}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.WriteLine();
+
+            // Example #2
+
+            
             Console.WriteLine();
         }
     }

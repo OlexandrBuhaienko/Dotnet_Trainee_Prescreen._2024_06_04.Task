@@ -12,3 +12,4 @@ D:\WORK\Internships\_.NET_Trainee_Task\obj\Debug\net8.0\refint\_.NET_Trainee_Tas
 D:\WORK\Internships\_.NET_Trainee_Task\obj\Debug\net8.0\_.NET_Trainee_Task.pdb
 D:\WORK\Internships\_.NET_Trainee_Task\obj\Debug\net8.0\_.NET_Trainee_Task.genruntimeconfig.cache
 D:\WORK\Internships\_.NET_Trainee_Task\obj\Debug\net8.0\ref\_.NET_Trainee_Task.dll
+D:\WORK\Internships\_.NET_Trainee_Task\obj\Debug\net8.0\_.NET_Trainee_Task.sourcelink.json
