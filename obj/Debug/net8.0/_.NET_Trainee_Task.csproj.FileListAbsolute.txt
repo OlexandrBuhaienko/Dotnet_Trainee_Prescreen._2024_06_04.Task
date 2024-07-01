@@ -1,0 +1,14 @@
+D:\WORK\Internships\_.NET_Trainee_Task\bin\Debug\net8.0\_.NET_Trainee_Task.exe
+D:\WORK\Internships\_.NET_Trainee_Task\bin\Debug\net8.0\_.NET_Trainee_Task.deps.json
+D:\WORK\Internships\_.NET_Trainee_Task\bin\Debug\net8.0\_.NET_Trainee_Task.runtimeconfig.json
+D:\WORK\Internships\_.NET_Trainee_Task\bin\Debug\net8.0\_.NET_Trainee_Task.dll
+D:\WORK\Internships\_.NET_Trainee_Task\bin\Debug\net8.0\_.NET_Trainee_Task.pdb
+D:\WORK\Internships\_.NET_Trainee_Task\obj\Debug\net8.0\_.NET_Trainee_Task.GeneratedMSBuildEditorConfig.editorconfig
+D:\WORK\Internships\_.NET_Trainee_Task\obj\Debug\net8.0\_.NET_Trainee_Task.AssemblyInfoInputs.cache
+D:\WORK\Internships\_.NET_Trainee_Task\obj\Debug\net8.0\_.NET_Trainee_Task.AssemblyInfo.cs
+D:\WORK\Internships\_.NET_Trainee_Task\obj\Debug\net8.0\_.NET_Trainee_Task.csproj.CoreCompileInputs.cache
+D:\WORK\Internships\_.NET_Trainee_Task\obj\Debug\net8.0\_.NET_Trainee_Task.dll
+D:\WORK\Internships\_.NET_Trainee_Task\obj\Debug\net8.0\refint\_.NET_Trainee_Task.dll
+D:\WORK\Internships\_.NET_Trainee_Task\obj\Debug\net8.0\_.NET_Trainee_Task.pdb
+D:\WORK\Internships\_.NET_Trainee_Task\obj\Debug\net8.0\_.NET_Trainee_Task.genruntimeconfig.cache
+D:\WORK\Internships\_.NET_Trainee_Task\obj\Debug\net8.0\ref\_.NET_Trainee_Task.dll
